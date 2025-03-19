@@ -1,0 +1,58 @@
+// Breaking Records
+
+    function breakingRecords(scores) {
+        let maior = scores[0];
+        let menor = scores [0];
+        let auxMaior = 0;
+        let auxMenor = 0;
+        
+        for(let i = 0; i < scores.length; i++){
+            if(maior < scores[i]){
+                maior = scores[i];
+                auxMaior++;
+            }
+            if(scores[i]< menor){
+                menor = scores[i];
+                auxMenor++;
+            }
+        }return [auxMaior, auxMenor]
+    
+    }
+
+// Staircase
+
+    function staircase(n) {
+        for (let i = 1; i <= n; i++){
+            let staircaseSpaceString = '';
+            let staircaseString = '';
+    
+            for (let space = 0; space < n-i; space++){
+                staircaseSpaceString += ' ';
+            }
+    
+            for (let hash = 0; hash < i; hash++){
+                staircaseString += '#';
+            }
+    
+            console.log(staircaseSpaceString + staircaseString);
+    
+        }
+    }
+
+//Mini-Max Sum
+
+    function miniMaxSum(arr) {
+        // Write your code here
+        let somaArr = arr.sort((a, b) => a - b);
+        let minSoma = 0;
+        let maxSoma = 0;
+    
+        for(let i=0; i<arr.length - 1; i++){
+            minSoma += arr[i];
+            maxSoma += arr[i + 1];
+        }
+        
+        console.log(minSoma, maxSoma);
+    }
+
+    
